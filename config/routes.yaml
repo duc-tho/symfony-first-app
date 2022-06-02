@@ -1,3 +1,28 @@
-#index:
-#    path: /
-#    controller: App\Controller\DefaultController::index
+index:
+     path: /
+     controller: App\Controller\HomeController::index
+
+api_user_get:
+     path: api/user
+     methods: "GET"
+     controller: App\Controller\UserController::index
+
+api_user_get_id:
+     path: api/user/{id}
+     methods: "GET"
+     controller: App\Controller\UserController::getById
+
+api_user_create:
+     path: api/user
+     methods: "POST"
+     controller: App\Controller\UserController::create
+
+api_user_update:
+     path: api/user/{id}
+     methods: "PUT"
+     controller: App\Controller\UserController::update
+
+api_user_delete:
+     path: api/user/{id}
+     methods: "DELETE"
+     controller: App\Controller\UserController::delete
